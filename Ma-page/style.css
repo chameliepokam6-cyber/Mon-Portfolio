@@ -1,0 +1,378 @@
+/*-------RESET ET STYLES GLOBAUX-------*/
+*{box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+html{
+    scroll-behavior: smooth; 
+}
+     /*PERMET DE RENDRE LA NAVIGATION ENTRE LES DIFFERENTES SECTIONS 
+                                        MOINS BRUTALE ET MOINS RAPIDE*/
+
+/*-----elemens du body-----*/
+
+body{
+    font-family: 'Segoe UI', Tahoma,Arial, sans-serif;
+    font-size: 20px; /*----TAILLE DE POLICE-----*/
+    color: #333;
+    background-color: #FFFFFF;
+    line-height: 2;/*-----INTERLIGNE-----*/
+}
+
+/*-----LES TITRES-----*/
+
+h1{
+    color: darkblue; /*-----TOUS LES H1 AURONT UNE COULEUR BLEU-FONCE-----*/
+    font-size: 2.8em; /*-----TOUS LES H1 AURONT 2,8 FOIS LEUR TAILLE NORMALE 
+    DANS LE HTML-----*/
+    margin-bottom: 30px;
+}
+h2{
+    color:blue; /*-----TOUS LES H2 AURONT UNE COULEUR BLEUE----*/
+    font-size: 2em; /*-----TOUS LES H2 AURONT 2 FOIS LEUR TAILLE NORMALE 
+    DANS LE HTML-----*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+h3{
+    color: royalblue; /*-----TOUS LES H3 AURONT UNE COULEUR BLEU-PALE----*/
+    font-size: 1.5em; /*-----TOUS LES H3AURONT 1,5 FOIS LEUR TAILLE NORMALE 
+    DANS LE HTML-----*/
+    margin-bottom: 15px;
+}
+/*-----LIENS DE LA PAGE-----*/
+a{
+    color: gray;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #0056b3;
+    text-decoration: underline;
+    /*-----LES LIENS DEVIENDRONT BLEUS ET SOULIGNES QUAND ON CLIQUERA
+      DESSUS-----*/
+}
+/*-----PARAGRAPHES ET LISTES-----*/
+p{ 
+margin-bottom: 15px;
+;
+}
+ul {
+margin-left: 40px;
+margin-bottom: 40px;
+
+}
+li {
+margin-bottom: 10px;
+}
+/*-----HEADER-----*/
+header{
+    max-width: 1200px;
+    color: whitesmoke;   /*-----COULEUR DU TEXTE DANS LE HEADER-----*/
+    background-color: skyblue; /*COULEUR DE FOND DU HEADER-----*/
+    text-align: center;
+    padding: 10px 20px;
+    margin: 0 auto;
+    border-radius:30px;
+    border:5px dashed darkblue; /*-----BORDURE TIRETEE BLEU-FONCE-----*/
+}
+header p{
+    color: white; 
+    font-family: fantasy;
+    font-style: italic;
+    font-size:larger;        /*PROPRIETES DU PARAGRAPHE DANS LE HEADER*/
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/*-----CARACTERISTIQUES DES PARAGRAPHES CONTENUES DANS LE HEADER-----*/
+
+
+/*-----NAVIGATION-----*/
+
+nav ul{
+    list-style: none;
+    margin: 20px;
+    padding: 20px;
+}
+
+nav li{
+    display:inline-block;
+    margin: 10px 30px;
+}
+
+nav a{
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 10px 10px;
+    transition: background-color 0.3s ease;
+
+}
+
+nav a:hover{
+    background-color:rgba(255,255,255,0.2);
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/*-----SECTION DE CONTENU-----*/
+
+section{
+    max-width: 900px;
+    padding:15px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    text-align:start;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style:italic;
+}
+
+/*-----SECTION A PROPOS-----*/
+
+#a-propos img{
+    border-radius: 50%;  /*L´IMAGE EST DANS UN CERCLE PARFAIT*/
+    display: block;   /*CENTRER L´IMAGE*/
+    margin: 0 auto;
+    border: 5px solid blue;   /*COULEUR DE LA BORDURE*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;  /*L´IMAGE REMPLIT LE CERCLE SANS SE DEFORMER*/
+
+}
+
+
+
+/*-----SECTION COMPETENCES-----*/
+
+#competences article{
+    border-left: 3px solid orange;  /*-----TRAIT BLEU SUR LE COTE GAUCHE DE LA 
+    SECTION-----*/
+    padding: 20px 20px 20px 30px;
+    margin: 20px 20px 20px 30px;
+    margin-bottom: 60px;
+    background-color: lightblue;
+    border-radius: 10px;
+     transition: box-shadow 0.3s ease;  
+
+}
+
+#competences li{
+    border-bottom: 1px solid orange;
+
+}
+#competences li:last-child{
+    border-bottom: none;
+}
+
+#parcours article{
+    background-color: #F5F5F5;
+    border-left: 3px solid royalblue;
+    margin: 20px 20px 20px 30px;
+    margin-bottom: 60px;
+
+   
+}
+#parcours li{
+    border-bottom: 1px solid royalblue;
+}
+#parcours li:last-child{
+    border-bottom: none;
+}
+
+section{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.divider{
+    display: flex;
+    align-items: center;
+}
+
+.divider::before,
+.divider::after{
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background-color: blue;
+}
+
+/*-----FORMULAIRE-----*/
+
+
+
+
+form{
+    max-width: 2000px;
+    margin: 15px auto;
+}
+label{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color:royalblue;
+
+}
+
+abbr[title]{
+    color: red;
+    cursor: help;
+    text-decoration: none;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+input[type="E-mail"],
+input[type="tel"],
+input[type="password"],
+select,
+textarea {
+width: 100%; /*-----LES CHAMPS DE SAISIE PRENNENT TOUTE LA LAGEUR-----*/
+padding: 10px;
+border: 1px solid black; /*-----COULEUR DE BORDURE DES CHAMPS DE SAISIE-----*/
+border-radius: 6px;
+font-size: 22px;
+font-family: inherit; /*LES CHAMPS ONT LA MEME POLICE UTILISEE DANS LE RESTE DE LA PAGE-----*/
+}
+input:focus,
+select:focus,
+textarea:focus {
+border-color: royalblue; /*-----COULEUR DES BORDURES DES CHAMPS DE SAISIE LORSQU´ON
+ CLIQUE DESSUS-----*/
+outline:none;  /*SUPRESSION DE LA BORDURE PAR DEFAUT*/
+box-shadow: 8px 8px 8px 8px black; /*-----HALO COLORE AUTOUR DU CHAMP SELECTIONNE-----*/
+}
+
+
+/* Placeholder en italique et gris */
+
+
+::placeholder {
+  color: #AAAAAA;
+  font-style: italic;
+}
+
+/*-----BOUTON D´ENVOI DU FORMULAIRE-----*/
+
+
+input[type="submit"]{
+    background-color: gray;
+    color: black;
+    font-family: inherit;  /*-----MEME POLICE QUE DANS LE RESTE DE LA PAGE-----*/
+    font-style: italic;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 10px;
+    margin-right: 60px;
+    margin-left: 60px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;  /*LE CURSEUR SE TRANS FORME E UNE PETITE MAIN QUAND ON CLIQUE SUR LE BOUTON*/
+}
+input[type="submit"]:hover{
+  background-color: green;  
+}  /*LA COULEUR DE FOND PASSE AU VERT LORSQU´ON SURVOLE LE BOUTON*/
+
+
+
+/*-----BOUTON DE REINITIALISATION-----*/
+
+
+input[type="reset"]{
+    background-color: gray;
+    color: black;
+    font-family: inherit;    /*-----MEME POLICE QUE DANS LE RESTE DE LA PAGE-----*/
+    font-style: italic;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;       /*LE CURSEUR SE TRANS FORME E UNE PETITE MAIN QUAND ON CLIQUE 
+                                SUR LE BOUTON*/
+                                
+}
+ 
+
+input[type="reset"]:hover{
+  background-color: red;  
+}    /*LA COULEUR DE FOND PASSE AU ROUGE LORSQU´ON SURVOLE LE BOUTON*/
+
+
+
+   /*-----LES CASES A COCHER-----*/
+
+input[type="checkbox"]{
+    accent-color:blue;  /*COULEUR DE LA CASE UNE FOIS COCHEE*/
+}
+
+input[type="checkbox"]+label{
+    display: inline;  /*-----LLE TEXTE RESTE A COTE DE LA CASE A COCHER-----*/
+}
+
+
+
+
+#contact li{
+    list-style: none;  /*SUPPRIME LES PUCES*/
+    border-bottom: 2px solid blue;   /*TRAIT BLEU APRES CHAQUE LI*/
+}
+
+#contact li:last-child{
+    border-bottom: none;
+}  /*SUPPRIMR LE TRAIT POUR LE DERNIER LI*/
+
+
+#contact a:hover{
+    text-decoration: none;   
+}    /*LE LIEN NE SE SOULIGNE PAS LORSQU´ON LE SURVOLE*/
+
+#contact aside{
+    background-color: skyblue;
+    width: 100%;
+    margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+
+address {
+  font-style: normal;           /* Supprime l'italique par défaut */
+  line-height: 1.8;
+}
+
+
+
+/*PIED DE PAGE*/
+
+
+footer{
+    width: 100%;
+    background-color: #333333;    /*FOND GRIS SOMBRE POUR LE FOOTER*/
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 80px;      /*SEPARE LE FOOTER DU RESTE DE CONTENU DE LA PAGE*/
+}
+
+
+footer a{
+    color: lightblue;     /*COULEUR BLANCHE POUR LES LIENS DANS LE FOOTER*/ 
+    margin: 60px;
+
+
+}
+
+footer a:hover{
+    text-decoration: none;
+}
+    

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initiale-scale=1.0">
+        <meta name="description" content="Page de présentation de Brunelle-étudiante GUA Bachelorn1 1">
+        <meta name="author" content="Brunelle">
+        <meta name="keywords" content="DEV_WEB,html,Python,Portfolio">
+        <link rel="stylesheet" href="style.css">
+        <title>Brunelle Pokam-Dévellopeur web junior++</title>
+    </head>
+        <body> <!--cette balise contient le contenu de lage et ses différentes sections-->
+            <header>
+             <h1>Ma présentation</h1>
+                <p>Jeune étudiante motivée et engagée passionnée de développement web et de programmation.</p>
+             <nav aria-label="Navigation principale">
+              <ul>
+                     <li><a href="#a-propos">A PROPOS</a></li>
+                     <li><a href="#competences"> Compétences</a></li>
+                     <li><a href="#parcours">Parcours</a></li>
+                     <li><a href="#contact">Contact</a></li>
+               </ul>
+             </nav>
+            </header>
+            <main>
+                <section id="a-propos">
+                    <h2> A propos de moi</h2>
+                    <img
+                        src="image/ma photo.jpeg"
+                        alt="Photo de profil de Pokam Brunelle souriante et portant un pull rose"
+                        width="200"
+                        height="300"
+                    >
+                    
+                 <p>
+                     Bonjour ! Je suis <strong>Brunelle Pokam</strong>,étudiante à la Green Up Academy Paris en <em>Bachelor 1 Administrateur d´Infrastructures Sécurisées.</em> Je suis une passionnée des technologies,numérique et du mode des <b> STEMS</b>, j´ai décidé de transformer cette passion en carrière professionnelle.
+
+                 </p>
+                 <p>
+                    Mon objectif est de devenir un <strong>dévellopeur Full-stack</strong> capable de créer des applications web modernes,performantes et accessibles. 
+                 </p>
+                </section><hr/>
+                <section id="competences">
+                    <h2><strong>Mes Compétences et centres d´intéret</strong></h2>
+                <article>
+                <h3>Compétences techniques</h3>
+                <ul>
+                    <li><strong>HTML5</strong>:Structuration,sémantique,accessibilité</li>
+                    <li><strong>CSS</strong>:Mise en page,GRID,Flexbox,Design d´interface</li>
+                    <li><strong>Javascript</strong>:Base en programmation</li>
+                    <li><strong>Git & Github</strong>Gestion des versions,travailet collaboration</li>
+                    <li><strong>Cybersécurité</strong>:Analyse des vulnérabilités et encryptage/sécurisation</li>
+                    <li><strong>VS Code</strong>:Maitrise des editeurs et des extensions</li>
+                </ul>
+                </article>
+                <article>
+                    <h3>Competences transversales</h3>
+                    <ul>
+                        <li>Travail en equipe et collaboration</li>
+                            <li>Gestion de projet</li>
+                            <li>Resolution de probleme</li>
+                            <li>Esprit de leadership</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Centres d´intéret</h3>
+                    <ul>
+                        <li>Codage</li>
+                        <li>Création de simples pages web</li>
+                        <li> développement d´applications</li>
+                        <li>Green IT</li>
+
+                    </ul>
+                </article>
+                </section><hr/>
+                <section id="parcours" class="parcours">
+                    <h2>Mon parcours</h2>
+                    <article>
+                        <h3>Formations</h3>
+                        <ul>
+                        <li><strong>2026(en cours)</strong>:Bachelor 1 Developpement DEV_WEB
+                        Green Up Academy, Paris <em>Specialisation : Front-end et Back-end</em>
+                        </li>
+                        <li><strong>2025</strong>:Baccalaureat scientifique;Lycée bilingue de Dschang
+                        <em>Option : Mathematiques et sciences physiques</em></li>
+                        <li><strong>2024</strong>:Probatoire scientifique;Lycée bilingue de Dschang
+                        <em>OPtion : Mathematiques et sciences physiques</em></li>
+                        </ul>
+                    </article>
+                    <div class="divider"> Séparateur</div>
+                    <article>
+                        <h3> Expériences</h3>
+                        <p>Pas d´expérience particulière pour le moment</p>
+                    </article>
+                    <div class="divider"> Séparateur</div>
+                    <article>
+                        <h3>Certifications et formation continue</h3>
+                        Cours HTML-dÉVELOPPEMENT WEB(en cours)
+                    </article>
+                </section><hr/>
+            <section id="contact">
+                <article><p><strong><h2>Me contacter</h2></strong></p>
+                     <p>Vous souhaitez discuter d´un projet ou d´une opprtunité de stage ou simplement échanger sur le développement web? N´hésitez pas à me contacter via le formulaire ci-dessous ou par les réseaux sociaux.</p>
+                    <form>
+                        <p><strong>NB : * indique les champs obligatoires</strong></p>
+                        <label for="date">Date d´enregistrement<abbr title="champ obligatoire">*</abbr></label>
+                        <input type="datetime-local" id="date" name="date"><br>
+                        <label for="Nom">Nom complet<abbr title="champ obligatoire">*</abbr></label>
+                        <input type="text" id="nom" name="nom" placeholder="Entrez votre nom et prénom" required><br>
+                        <label for="sexe">Sexe<abbr title="champ obligatoire">*</abbr></label>
+                        <input type="radio" id="garcon" name="sexe" required>M
+                        <input type="radio" id="fille" name="sexe">F<br>
+                        <label for="E-mail">E-mail<abbr title="champ obligatoire">*</abbr></label>
+                        <input type="e-mail" id="e-mail"  name="e-mail" placeholder="nom@servicedemessagerie.com" required><br>
+                        <label for="Téléphone">Téléphone<abbr title="champ obligatoire">*</abbr></label>
+                        <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre numéro de téléphone" required pattern="[0-9]"{10}>
+                        <small>Format : 10 chiffres sans espace</small><br>
+                        <label for="Mot de passe">Mot de passe<abbr title="champ obligatoire">*</abbr></label>
+                        <input type="password" id="pass" name="pass" placeholder="Entrez votre mot de passe" required><br>
+                        <label for="sujet">Sujet<abbr title="Champ obligatoire">*</abbr></label>
+                        <select id="Sujet" name="sujet" required>
+                        <option value="">Choisissez un sujet</option>
+                        <option value="stage">Opportunité de stage</option>
+                        <option value="projet">Proposition de projet</option>
+                        <option value="collaboration">Simple collaboration</option>
+                        <option value="entrtien">Entretien de renseignements</option>
+                        <option value="autre">Autre</option>
+                     </select><br>
+                     <label for="message">Votre message<abbr title="champ obligatoire">*</abbr></label>
+                     <textarea id="message" name="message" rows="5" placeholder="Décrivez votre message ici" required
+                     minlength="20"
+                     maxlength="1200"
+                     ></textarea>
+                     <small>Entre 20 et 1200 caractères</small><br>
+                     <input type="checkbox" id="choix" name="choix" required>
+                        <label for="recevoir">Recevoir une copie du message par email</label><br>
+                        <input type="checkbox" id="choix 2" name="choix 2" required>
+                        <label for="accepter">J´accepte que mes données soient utilisées pour me recontacter</label><br>
+                        <input type="submit" value="Envoyez le message">
+                        <input type="reset" value="Reinitialiser"><br>
+                    </form>
+                </article>
+                <article>
+                    <h3>Retrouvez moi aussi sur</h3>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/chamelie-pokam-9a22b7399?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">Mon compte Linkedin</a></li>
+                        <li><a href="mailto:chameliepokam6@gmail.com" target="_blank">Mon adresse mail</a></li>
+                        <li><a href="https://github.com/chameliepokam6-cyber" target="_blank">Github</a></li>
+                        <li><a href="tel:+33782712097">Mon numéro de téléphone</a></li>
+                    </ul><hr>
+                        <aside>
+                            <h3>Coordonnées</h3>
+                            <address>
+                                <strong>Brunelle Pokam</strong><br>
+                                1 Avenu d´Anjou<br>
+                                91940 Les Ulis<br>
+                                France<br>
+                                <br>
+                                Email : <a href="mailto:chameliepokam6@gmail.com" target="_blank">chameliepokam6@gmail.com</a><br>
+                                Tél : <a href="tel:+33782712097">07 82 71 20 97</a>
+                                </bt>
+                            </address>
+                        </aside>
+                </article>                 
+            </section><hr/>
+            <footer>
+                <p>
+                    <small>
+                         &copy; 2026 Brunelle. Tous droits réservés. <br>
+                         Site créé dans le cardre du cours de Développement Web - Bachelor 1
+                         <br>
+                         Green Up Academy
+                    </small>
+                </p>
+                <p>
+                    <small>
+                        Dernière mise à jour
+                        <time datetime="2026-02-21">21-02-2026</time>
+                    </small>
+                </p>
+                <p>
+                    <small>
+                        <a href="mentionslegales.html">mentions légales</a>
+                        <a href="confidentialite.html">Politique de confidentialité</a>
+                        <a href="#top">Revenir en haut de la page</a>
+                    </small>
+                </p>
+            </footer>
+
+            </main>
+        </body>
+</html>
