@@ -15,7 +15,7 @@ html{
 
 body{
     font-family: 'Segoe UI', Tahoma,Arial, sans-serif;
-    font-size: 20px; /*----TAILLE DE POLICE-----*/
+    font-size: 12px; /*----TAILLE DE POLICE-----*/
     color: #333;
     background-color: #FFFFFF;
     line-height: 2;/*-----INTERLIGNE-----*/
@@ -25,9 +25,9 @@ body{
 
 h1{
     color: darkblue; /*-----TOUS LES H1 AURONT UNE COULEUR BLEU-FONCE-----*/
-    font-size: 2.8em; /*-----TOUS LES H1 AURONT 2,8 FOIS LEUR TAILLE NORMALE 
+    font-size: 2.2.em; /*-----TOUS LES H1 AURONT 2,8 FOIS LEUR TAILLE NORMALE 
     DANS LE HTML-----*/
-    margin-bottom: 30px;
+    margin-bottom: 2px;
 }
 h2{
     color:blue; /*-----TOUS LES H2 AURONT UNE COULEUR BLEUE----*/
@@ -70,22 +70,25 @@ margin-bottom: 10px;
 }
 /*-----HEADER-----*/
 header{
-    max-width: 1200px;
+    width: 100%;
     color: whitesmoke;   /*-----COULEUR DU TEXTE DANS LE HEADER-----*/
     background-color: skyblue; /*COULEUR DE FOND DU HEADER-----*/
-    text-align: center;
-    padding: 10px 20px;
-    margin: 0 auto;
-    border-radius:30px;
-    border:5px dashed darkblue; /*-----BORDURE TIRETEE BLEU-FONCE-----*/
-}
+    border-radius:1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:nowrap;
+    gap: 20px;
+     }
+
+     
 header p{
     color: white; 
     font-family: fantasy;
     font-style: italic;
-    font-size:larger;        /*PROPRIETES DU PARAGRAPHE DANS LE HEADER*/
+    font-size:1.1em;        /*PROPRIETES DU PARAGRAPHE DANS LE HEADER*/
     font-weight: bold;
-    margin-bottom: 5px;
 }
 
 /*-----CARACTERISTIQUES DES PARAGRAPHES CONTENUES DANS LE HEADER-----*/
@@ -95,14 +98,13 @@ header p{
 
 nav ul{
     list-style: none;
-    margin: 20px;
-    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:nowrap;
 }
 
-nav li{
-    display:inline-block;
-    margin: 10px 30px;
-}
 
 nav a{
     font-weight: bold;
@@ -127,16 +129,20 @@ section{
     margin: 0 auto;
     margin-bottom: 80px;
     text-align:start;
-    font-size: 22px;
+    font-size: 16px;
     font-family: 'Times New Roman', Times, serif;
     font-style:italic;
 }
 
 /*-----SECTION A PROPOS-----*/
 
+
+
+
+
 #a-propos img{
     border-radius: 50%;  /*L´IMAGE EST DANS UN CERCLE PARFAIT*/
-    display: block;   /*CENTRER L´IMAGE*/
+  
     margin: 0 auto;
     border: 5px solid blue;   /*COULEUR DE LA BORDURE*/
     margin-top: 20px;
@@ -145,22 +151,42 @@ section{
     height: 200px;
     object-fit: cover;  /*L´IMAGE REMPLIT LE CERCLE SANS SE DEFORMER*/
 
+
+}
+#a-propos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+
 }
 
 
 
-/*-----SECTION COMPETENCES-----*/
+.grille-competences{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 300px;
+    gap: 10px;
+    
+}
 
-#competences article{
-    border-left: 3px solid orange;  /*-----TRAIT BLEU SUR LE COTE GAUCHE DE LA 
+.competences-article{
+    border-left: 5px solid orange;  /*-----TRAIT BLEU SUR LE COTE GAUCHE DE LA 
     SECTION-----*/
-    padding: 20px 20px 20px 30px;
-    margin: 20px 20px 20px 30px;
-    margin-bottom: 60px;
+    padding: 20px;
     background-color: lightblue;
     border-radius: 10px;
+    max-height: 300px;
+    flex: 1 1 calc(33% - 20px);
      transition: box-shadow 0.3s ease;  
-
+     
+     
 }
 
 #competences li{
@@ -171,11 +197,18 @@ section{
     border-bottom: none;
 }
 
+#parcours{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #parcours article{
     background-color: #F5F5F5;
     border-left: 3px solid royalblue;
     margin: 20px 20px 20px 30px;
     margin-bottom: 60px;
+    max-width: 700px;
 
    
 }
