@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="style.css">
         <title>Brunelle Pokam-Dévellopeur web junior++</title>
     </head>
+    <script src="script.js"></script>
         <body> <!--cette balise contient le contenu de lage et ses différentes sections-->
             <header>
         
@@ -45,6 +46,9 @@
                 </section><hr/>
                 <section id="competences">
                     <h2><strong>Mes Compétences et centres d´intéret</strong></h2>
+                    <button id="btn-competences" onclick="toggleCompetences()">
+                        Masquer les compétences
+                    </button>
                    <div class="grille-competences"> 
                 <article class="competences-article">
                 <h3>Compétences techniques</h3>
@@ -135,22 +139,15 @@
             <section id="contact">
                 <article><p><strong><h2>Me contacter</h2></strong></p>
                      <p>Vous souhaitez discuter d´un projet ou d´une opprtunité de stage ou simplement échanger sur le développement web? N´hésitez pas à me contacter via le formulaire ci-dessous ou par les réseaux sociaux.</p>
-                    <form>
+                    <form action="#" method="post" onsubmit="return validerFormulaire()">
                         <p><strong>NB : * indique les champs obligatoires</strong></p>
-                        <label for="date">Date d´enregistrement<abbr title="champ obligatoire">*</abbr></label>
-                        <input type="datetime-local" id="date" name="date"><br>
                         <label for="Nom">Nom complet<abbr title="champ obligatoire">*</abbr></label>
                         <input type="text" id="nom" name="nom" placeholder="Entrez votre nom et prénom" required><br>
-                        <label for="sexe">Sexe<abbr title="champ obligatoire">*</abbr></label>
-                        <input type="radio" id="garcon" name="sexe" required>M
-                        <input type="radio" id="fille" name="sexe">F<br>
                         <label for="E-mail">E-mail<abbr title="champ obligatoire">*</abbr></label>
                         <input type="e-mail" id="e-mail"  name="e-mail" placeholder="nom@servicedemessagerie.com" required><br>
                         <label for="Téléphone">Téléphone<abbr title="champ obligatoire">*</abbr></label>
                         <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre numéro de téléphone" required pattern="[0-9]"{10}>
                         <small>Format : 10 chiffres sans espace</small><br>
-                        <label for="Mot de passe">Mot de passe<abbr title="champ obligatoire">*</abbr></label>
-                        <input type="password" id="pass" name="pass" placeholder="Entrez votre mot de passe" required><br>
                         <label for="sujet">Sujet<abbr title="Champ obligatoire">*</abbr></label>
                         <select id="Sujet" name="sujet" required>
                         <option value="">Choisissez un sujet</option>
@@ -171,7 +168,7 @@
                         <input type="checkbox" id="choix 2" name="choix 2" required>
                         <label for="accepter">J´accepte que mes données soient utilisées pour me recontacter</label><br>
                         <input type="submit" value="Envoyez le message">
-                        <input type="reset" value="Reinitialiser"><br>
+                        <input type="reset" value="Reinitialiser">
                     </form>
                 </article>
                 <article>
