@@ -26,6 +26,7 @@ const competences = [
 ];
 
 
+
 //TODO 2.3 : CREATIO DE LA FONCTION getNomComplet 
 
 function getNomComplet(){
@@ -45,7 +46,7 @@ function afficherBienvenue(){
 function listerCompetences(){
     console.log("Mes compétences de développeuse:");
     for(const c of competences){
-        console.log("check" + c);
+        console.log("check" + ":" + c);
     }
 }
 
@@ -91,6 +92,10 @@ function toggleCompetences(){
 }
 
 
+
+
+
+
 //EXERCICE 4 : VALIDATION DU FORMULAIRE 
 
 //TODO 4.1 : MODIFICATION DU FORMULAIRE 
@@ -112,7 +117,7 @@ function validerFormulaire(){
     //on collecte toutes les erreurs avant d´alerter
 
     const error = [];
-    if(nom =" "){
+    if(nom === " "){
         //alert("Merci de saisir votre nom.");
         //return false; //Bloque l´envoi
         error.push(" Le nom est obligatoire");
@@ -161,3 +166,81 @@ function validerFormulaire(){
     return true; //<- Autorise l´envoi
 }
 
+
+//EXERCICE 6-COMPTEUR DE COMPETENCES DYNAMIQUE
+
+//TODO 6-1:CREATION DE LA FONCTION resumeCompetences
+
+function resumeCompetences(){
+ const total = competences.length;
+ console.log("---Mes " + total  + " competences---");
+ competences.forEach(function(c,i){
+    console.log(" " + (i+1) + "." + c);
+ })
+}
+
+//TODO 6-2
+
+function ajouterCompetences(nouvelle){
+if (competences.includes(nouvelle)) {
+  console.log('"' + nouvelle + '" est déjà dans ta liste.');
+  return;
+}
+
+competences.push(nouvelle);
+console.log('"' + nouvelle + '" ajoutée ! Total : ' + competences.length);
+}
+
+//TODO 6-3
+
+resumeCompetences();
+
+ajouterCompetences("Git");
+ajouterCompetences("HTML5");
+ajouterCompetences("Chrome DevTools");
+
+resumeCompetences();
+
+
+//EXERCICE 7: MESSAGE D´ACCUEIL SELON L´HEURE
+
+//TODO 7-1 CREER LA FONCTION getMoment()
+//ELLE RETOURNE LE MOMENT DE LA JOURNEE EN FONCTION DE L´HEURE
+
+function getMoment(){
+    const heure = new Date().getHours(); //0-23
+
+    if (heure >= 6 && heure < 12){
+        return "matin" ;
+    }
+    else if(heure >= 12 && heure <18){
+        return "après midi" ;
+    }
+    else if(heure >= 18 && heure < 22){
+        return "soirée" ;
+    }
+    else{
+        return "nuit" ;
+    }
+}
+
+//TODO 7-2 :CREER LA FONCTION afficherAccueil
+
+function afficherAccueil(prenom){
+    const moment = getMoment();
+    const heure = new Date().getHours();
+    //choisir la salutation selon le moment
+
+    let salutation
+    if (moment === "matin") salutation = "Bonjour";
+    else if(moment === "nuit") salutation = "Bonne nuit";  
+    else salutation = "Bonsoir";
+    
+    //afficher le message
+    console.log(salutation + " " + "!");
+    console.log("Il est " + heure + "h- bon(ne)" + moment +"!");
+}
+
+//TODO 7-3:APPELLE afficherAccueil() au chargement
+//Utilise la variable prenom de EX.2
+afficherAccueil(prenom);
