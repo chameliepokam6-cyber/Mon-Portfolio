@@ -244,3 +244,23 @@ function afficherAccueil(prenom){
 //TODO 7-3:APPELLE afficherAccueil() au chargement
 //Utilise la variable prenom de EX.2
 afficherAccueil(prenom);
+
+
+//SEMAINE 9
+
+//DOM
+
+const a = document;
+console.log(a);
+
+const b = document.head;
+console.log(b);
+
+const d = document.title;
+console.log(d);
+
+const e = document.getElementById('a-propos');
+console.log(e);
+
+const f = document.querySelector("nav");
+console.log(f);
