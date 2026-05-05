@@ -252,15 +252,21 @@ afficherAccueil(prenom);
 
 const a = document;
 console.log(a);
+console.log(typeof a);
 
 const b = document.head;
 console.log(b);
 
 const d = document.title;
 console.log(d);
+d.textContent = "À propos de moi";
+console.log(d); 
 
-const e = document.getElementById('a-propos');
+const e = document.getElementById("contact");
 console.log(e);
 
 const f = document.querySelector("nav");
 console.log(f);
+
+const h = document.body;
+console.log(h);
